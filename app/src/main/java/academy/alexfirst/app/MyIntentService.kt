@@ -4,24 +4,23 @@ import android.app.IntentService
 import android.content.Intent
 import android.util.Log
 
+// Константа-ключ может быть любой, но принято так ...
+const val LOK_BRODCAST = "academy.alexfirst.app.action.TEXT"
 
 class MyIntentService : IntentService("MyIntentService") {
 
     override fun onHandleIntent(intent: Intent?) {
-        sendMes()
+        Log.i("Ok", "->MyIntentService->onHandleIntent")
         locBrodcast()
-    }
-
-    private fun sendMes() {
-        Log.i("Ok", "->MyIntentService")
     }
 
     private fun locBrodcast() {
 
-        Log.i("Ok", "->MyIntentService->Broadcast")
+        Log.i("Ok", "->MyIntentService->locBroadcast")
 
-        val intent = Intent("locBrodcast")
+        val intent = Intent(LOK_BRODCAST)
         intent.putExtra("key", "Тут выгружаем из MyIntentService")
         sendBroadcast(intent)
+
     }
 }

@@ -9,36 +9,32 @@ import android.os.Bundle
 import android.util.Log
 
 class ActivitySecond : AppCompatActivity() {
-    private lateinit var receiver: BroadcastReceiver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val intentService: Intent = Intent(this, MyIntentService::class.java)
+        val intentService = Intent(this, MyIntentService::class.java)
         startService(intentService)
 
-
     }
-
     override fun onStart() {
         super.onStart()
-         receiver = object : BroadcastReceiver() {
-            override fun onReceive(context: Context, intent: Intent) {
-                when (intent?.action) {
-                    "locBrodcast" -> handleSomethingHappened()
-                }
-            }
-        }
-    }
-
-    private fun handleSomethingHappened() {
-        Log.i("Ok", "->Broadcast->ActivytySecond")
+          registerReceiver(receiver, IntentFilter(LOK_BRODCAST));
     }
 
     override fun onStop() {
         super.onStop()
         unregisterReceiver(receiver)
     }
+
+    private val receiver: BroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            Log.i("Ok", "->Broadcast->ActivytySecond")
+            val intent = Intent(context, MainActivity::class.java)
+            //intent.putExtra("key", intent?.getStringExtra("text"))
+            startActivity(intent)
+        }}
+
 
 }
