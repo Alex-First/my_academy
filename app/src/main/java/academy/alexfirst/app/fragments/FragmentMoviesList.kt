@@ -32,3 +32,7 @@ class FragmentMoviesList: Fragment(){
                 ?.commit()
     }
 }
+
+// RV должен отображать по 2 колонки
+
+
