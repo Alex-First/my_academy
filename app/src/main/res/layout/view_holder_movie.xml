@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollViewCount"
-    tools:context=".MovieDetailsActivity"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:background="@color/movie_detai">
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/scrollViewCount"
+tools:context=".MovieDetailsActivity"
+android:layout_height="match_parent"
+android:layout_width="match_parent"
+android:background="@color/movie_detai">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="56dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="56dp">
 
         <ImageView
             android:id="@+id/combined_sh"
@@ -122,6 +122,7 @@
             app:layout_constraintStart_toStartOf="@+id/name"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
+
