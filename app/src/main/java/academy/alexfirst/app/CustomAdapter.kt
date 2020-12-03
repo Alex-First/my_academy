@@ -14,7 +14,7 @@ class CustomAdapter: RecyclerView.Adapter<ActorsViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: ActorsViewHolder, position: Int) {
-        val item = moves[position]
+        holder.onBind(moves[position])
     }
 
     override fun getItemCount() =  moves.size

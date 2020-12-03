@@ -7,5 +7,5 @@ data class Move(
     val reviews: String,
     val age: Int,
     val rating: Int,
-    val hasOscar: Boolean
+    val hasLike: Boolean
 )
