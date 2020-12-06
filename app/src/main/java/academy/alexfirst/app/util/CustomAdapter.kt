@@ -1,5 +1,6 @@
-package academy.alexfirst.app
+package academy.alexfirst.app.util
 
+import academy.alexfirst.app.R
 import academy.alexfirst.app.models.Actor
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CustomAdapter: RecyclerView.Adapter<ActorViewHolder>(){
+class CustomAdapter : RecyclerView.Adapter<ActorViewHolder>() {
 
     private var actors = listOf<Actor>()
 
@@ -25,7 +26,7 @@ class CustomAdapter: RecyclerView.Adapter<ActorViewHolder>(){
 
     }
 
-    override fun getItemCount() =  actors.size
+    override fun getItemCount() = actors.size
 
 }
 
