@@ -1,7 +1,7 @@
 package academy.alexfirst.app.fragments
 
 import academy.alexfirst.app.R
-import academy.alexfirst.app.util.CustomAdapter
+import academy.alexfirst.app.util.ActorAdapter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,7 +24,7 @@ class FragmentMoviesDetails : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         recyclerView = view.findViewById(R.id.recyclerView_details)
-        recyclerView?.adapter = CustomAdapter()
+        recyclerView?.adapter = ActorAdapter()
         recyclerView?.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
 
         view.findViewById<View>(R.id.path).setOnClickListener {

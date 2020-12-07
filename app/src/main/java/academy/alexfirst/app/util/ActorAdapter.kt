@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CustomAdapter : RecyclerView.Adapter<ActorViewHolder>() {
+class ActorAdapter : RecyclerView.Adapter<ActorViewHolder>() {
 
     private var actors = listOf<Actor>()
 

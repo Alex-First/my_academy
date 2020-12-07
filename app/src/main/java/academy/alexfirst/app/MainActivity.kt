@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun showFragment(fragment: Fragment){
+    fun showFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
                 .apply {
                     add(R.id.fragments_container, fragment)
