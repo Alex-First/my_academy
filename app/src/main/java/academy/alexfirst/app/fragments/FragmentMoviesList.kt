@@ -31,7 +31,6 @@ class FragmentMoviesList : Fragment() {
         recyclerView = view.findViewById(R.id.recyclerView_list)
         recyclerView.adapter = MoviesAdapter(clickListener)
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-        //recyclerView.addItemDecoration(MoviesItemDecoration(30, 2))
 
     }
 

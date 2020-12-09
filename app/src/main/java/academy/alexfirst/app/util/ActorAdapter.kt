@@ -22,11 +22,16 @@ class ActorAdapter : RecyclerView.Adapter<ActorViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ActorViewHolder, position: Int) {
-        holder.onBindViewHolder(actors[position])
+        holder.onBind(actors[position])
 
     }
 
     override fun getItemCount() = actors.size
+
+    fun bindMovies(newActors: List<Actor>) {
+        actors = newActors
+        notifyDataSetChanged()
+    }
 
 }
 
@@ -35,7 +40,7 @@ class ActorViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val image: ImageView = itemView.findViewById(R.id.imageView_actor)
     private val name: TextView = itemView.findViewById(R.id.textView_name)
 
-    fun onBindViewHolder(actor: Actor) {
+    fun onBind(actor: Actor) {
         image.setImageResource(actor.image)
         name.text = actor.name
     }
