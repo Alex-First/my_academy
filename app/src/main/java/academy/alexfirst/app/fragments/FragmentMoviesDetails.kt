@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+
 class FragmentMoviesDetails : Fragment() {
 
     private var recyclerView: RecyclerView? = null
@@ -31,4 +32,9 @@ class FragmentMoviesDetails : Fragment() {
             getActivity()?.onBackPressed()
         }
     }
+
+    interface MovieDetailsFragmentClickListener {
+        fun backToMoviesListFragment()
+    }
+
 }
